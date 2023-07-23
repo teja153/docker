@@ -1,0 +1,26 @@
+version : '3'
+services :
+  train:
+    image: teja153/trainimage:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 3
+    recharge:
+     image: teja153/rechargeimage:latest
+     ports:
+      - "81:80"
+     deploy:
+       replicas: 3
+    dth:
+     image: teja153/dthimage:latest
+     ports:
+      - "82:80"
+     deploy:
+       replicas: 3
+   movies:
+     image: teja153/moviesimage:latest
+     ports:
+      - "83:80"
+     deploy:
+       replicas: 3
